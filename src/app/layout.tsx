@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/next-script-for-ga */
 import "./globals.css";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, Nunito } from "next/font/google";
 import { Layout, FixedPlugin } from "@/components";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -10,10 +12,16 @@ const roboto = Roboto({
   display: "swap",
 });
 
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
+  display: "swap",
+})
+
 export const metadata: Metadata = {
-  title: "Next.js + Tailwind Portfolio Page",
+  title: "The One Perfumes - Fragrance of your imagination",
   description:
-    "Introducing Tailwind Portfolio Page, a versatile and stylish portfolio template built on the foundation of Tailwind CSS and Material Tailwind.",
+    "The best Perfumes and Attars that you can never forget.",
 };
 
 export default function RootLayout({
@@ -24,17 +32,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
+        {/* <script
           defer
           data-site="YOUR_DOMAIN_HERE"
           src="https://api.nepcha.com/js/nepcha-analytics.js"
-        ></script>
+        ></script> */}
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-      </head>
-      <body className={roboto.className}>
+      </head>x
+      <body className={nunito.className}>
         <Layout>
           {children}
-          <FixedPlugin />
+          {/* <FixedPlugin /> */}
         </Layout>
       </body>
     </html>

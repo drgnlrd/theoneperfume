@@ -16,13 +16,13 @@ export default function Portfolio() {
     <>
       <Navbar />
       <Hero />
-      <Clients />
-      <Skills />
+      {/* <Clients /> */}
+      {/* <Skills />
       <Projects />
       <Resume />
       <Testimonial />
       <PopularClients />
-      <ContactForm />
+      <ContactForm /> */}
       <Footer />
     </>
   );
